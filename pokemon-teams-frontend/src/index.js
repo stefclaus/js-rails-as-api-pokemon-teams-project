@@ -58,13 +58,13 @@ function handleButton(event) {
       case 'Release':
         let pokemonId = parseInt(event.target.dataset.pokemonId)
         event.target.parentNode.remove()
-        handleRelease(pokemonID)
+        handleRelease(pokemonId)
       break;
     }
   }
 }
 
-const handleRelease = (pokemonID) => {
+const handleRelease = (pokemonId) => {
   return fetch(`${POKEMONS_URL}/${pokemonId}`, {
     method: "DELETE",
       })
